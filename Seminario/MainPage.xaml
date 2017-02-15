@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="Seminario.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Seminario"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Pivot Title="Pivot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <PivotItem Header="Camera">
+            <Grid>
+                <CaptureElement Name="PreviewControl" Stretch="Uniform" HorizontalAlignment="Left" Height="525" Margin="10,10,0,0" VerticalAlignment="Top" Width="316"/>
+            </Grid>
+        </PivotItem>
+        <PivotItem Header="Audio">
+            <MediaElement 
+                Source="ms-appx:///arquivos/musica.mp3"
+                PosterSource="http://camendesign.com/code/video_for_everybody/poster.jpg"
+                AreTransportControlsEnabled="True"/>
+        </PivotItem>
+        <PivotItem Header="Video">
+            <MediaElement 
+                Source="ms-appx:///arquivos/video.wmv"
+                PosterSource="http://camendesign.com/code/video_for_everybody/poster.jpg"
+                AreTransportControlsEnabled="True"/>
+        </PivotItem>
+    </Pivot>
+</Page>
